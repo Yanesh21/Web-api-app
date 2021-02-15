@@ -29,14 +29,14 @@
             </tr>
             @foreach (var item in @ViewBag.data)
             {
-            <tr>
-                <td>@item.customer_id</td>
-                <td>@item.Contact_Name</td>
-                <td>@item.Customer_Type</td>
-                <td>@item.Num_Shares</td>
-                <td>@item.Share_Price</td>
-                <td>@item.balance</td>
-            </tr>
+                <tr>
+                    <td><a href="@Url.Action("", "home")">@item.customer_id</a></td>
+                    <td>@item.Contact_Name</td>
+                    <td>@item.Customer_Type</td>
+                    <td>@item.Num_Shares</td>
+                    <td>@item.Share_Price</td>
+                    <td>@item.balance</td>
+                </tr>
             }
         </table>
     </center>

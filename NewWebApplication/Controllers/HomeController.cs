@@ -29,6 +29,7 @@ namespace NewWebApplication.Controllers
         }
 
         [HttpGet("index")]
+        [HttpGet("")]
         public async Task<IActionResult> Index()
         {
             try

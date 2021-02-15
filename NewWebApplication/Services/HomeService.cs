@@ -51,7 +51,7 @@ namespace NewWebApplication.Services
                             
                             if (!skipFields.Contains(label))
                             {
-                                DateTime dateOfBirth = new DateTime();
+                                DateTime dateOfBirth;
                                 foreach (PropertyInfo prop in customerDetails.GetType().GetProperties())
                                 {
                                     if (prop.Name == label)
@@ -61,6 +61,11 @@ namespace NewWebApplication.Services
                                             if (label == "Date_Of_Birth")
                                             {
                                                 string date = reader.ReadString();
+                                                if(String.IsNullOrEmpty(date))
+                                                {
+                                                    continue;
+                                                }
+
                                                 dateOfBirth = DateTime.ParseExact(date, "dd/MM/yyyy", CultureInfo.InvariantCulture);
                                                 int age = DateTime.Today.Year - dateOfBirth.Year;
                                                 if (age < 18)
@@ -150,12 +155,19 @@ namespace NewWebApplication.Services
                                 customerDetails = new CustomerModel();
                             }
                         }
+                        else if (reader.Name == "/DataItem_Customer")
+                        {
+                            if (customerDetails != null)
+                            {
+                                customerList.Add(customerDetails);
+                            }
+                        }
                     }
                 }
 
                 foreach (CustomerModel customerDetail in customerList)
                 {
-                    if (customerDetail.Date_Of_Birth != null && customerDetail.Num_Shares > 0 && customerDetail.Share_Price > 0)
+                    if (customerDetail.Date_Of_Birth.Year != 1 && customerDetail.Num_Shares > 0 && customerDetail.Share_Price > 0)
                     {
                         _dbContext.Customer.Add(customerDetail);
                         _dbContext.SaveChanges();
