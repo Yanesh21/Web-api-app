@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <span>
+        <form action="upload" method="post" EncType="multipart/form-data">
+            <h1>Upload XML File:</h1>
+            <input type="file" id="file" name="uploadfile" class="form-control" accept="*" (change)="xmlfile" #fileUpload />
+            <div class="text-center panel-body">
+                <button type="submit" class="btn btn-sm btn-primary">submit</button>
+            </div>
+        </form>
+    </span>
+    <br />
+    <br />
+    <center>
+        <table border="1">
+            <tr>
+                <th>Customer_id</th>
+                <th>Customer_name</th>
+                <th>Customer_Type</th>
+                <th>Number of shares</th>
+                <th>Share Price</th>
+                <th>Balance</th>
+            </tr>
+            @foreach (var item in @ViewBag.data)
+            {
+            <tr>
+                <td>@item.customer_id</td>
+                <td>@item.Contact_Name</td>
+                <td>@item.Customer_Type</td>
+                <td>@item.Num_Shares</td>
+                <td>@item.Share_Price</td>
+                <td>(@item.Num_Shares * @item.Share_Price)</td>
+            </tr>
+            }
+        </table>
+    </center>
+</div>

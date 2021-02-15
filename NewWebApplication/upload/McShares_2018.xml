@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RequestDoc>
+	<Doc_Date>14/10/2013 12:16:33 PM</Doc_Date>
+	<Doc_Ref>SH1310140001</Doc_Ref>
+	<Doc_Data>
+		<DataItem_Customer>
+			<customer_id>C11233</customer_id>
+			<Customer_Type>Individual</Customer_Type>
+			<Date_Of_Birth>19/07/1987</Date_Of_Birth>
+			<Date_Incorp/>
+			<REGISTRATION_NO/>
+			<Mailing_Address>
+				<Address_Line1>21</Address_Line1>
+				<Address_Line2>Downing Street</Address_Line2>
+				<Town_City>London</Town_City>
+				<Country>England</Country>
+			</Mailing_Address>
+			<Contact_Details>
+				<Contact_Name>Mr John Doe</Contact_Name>
+				<Contact_Number>7784051</Contact_Number>
+			</Contact_Details>
+			<Shares_Details>
+				<Num_Shares>10200</Num_Shares>
+				<Share_Price>11.40</Share_Price>
+			</Shares_Details>
+		</DataItem_Customer>
+		<DataItem_Customer>
+			<customer_id>D43764</customer_id>
+			<Customer_Type>Corporate</Customer_Type>
+			<Date_Of_Birth/>
+			<Date_Incorp>01/07/2012</Date_Incorp>
+			<Registration_No>R14023581</Registration_No>
+			<Mailing_Address>
+				<Address_Line1>40</Address_Line1>
+				<Address_Line2>Morven Road</Address_Line2>
+				<Town_City>St Louis</Town_City>
+				<Country>United States</Country>
+			</Mailing_Address>
+			<Contact_Details>
+				<Contact_Name>Sterling Holdings</Contact_Name>
+				<Contact_Number>4455962820</Contact_Number>
+			</Contact_Details>
+			<Shares_Details>
+				<Num_Shares>4000</Num_Shares>
+				<Share_Price>9.20</Share_Price>
+			</Shares_Details>
+		</DataItem_Customer>
+		<DataItem_Customer>
+			<customer_id>H15676</customer_id>
+			<Customer_Type>Corporate</Customer_Type>
+			<Date_Of_Birth/>
+			<Date_Incorp>14/01/2002</Date_Incorp>
+			<Registration_No>R10411524</Registration_No>
+			<Mailing_Address>
+				<Address_Line1>50 Paul</Address_Line1>
+				<Address_Line2>Detroit Road</Address_Line2>
+				<Town_City>Ohio</Town_City>
+				<Country>United States</Country>
+			</Mailing_Address>
+			<Contact_Details>
+				<Contact_Name>Dellaware Ltd</Contact_Name>
+				<Contact_Number/>
+			</Contact_Details>
+			<Shares_Details>
+				<Num_Shares>63000</Num_Shares>
+				<Share_Price>12.20</Share_Price>
+			</Shares_Details>
+		</DataItem_Customer>
+		<DataItem_Customer>
+			<customer_id>T90897</customer_id>
+			<Customer_Type>Individual</Customer_Type>
+			<Date_Of_Birth/>
+			<Date_Incorp>20/08/2003</Date_Incorp>
+			<Registration_No>R156925840</Registration_No>
+			<Mailing_Address>
+				<Address_Line1>33 St James</Address_Line1>
+				<Address_Line2>Court</Address_Line2>
+				<Town_City>Port Louis</Town_City>
+				<Country>Mauritius</Country>
+			</Mailing_Address>
+			<Contact_Details>
+				<Contact_Name>Thompson Deutsche Ltd</Contact_Name>
+				<Contact_Number>579815662</Contact_Number>
+			</Contact_Details>
+			<Shares_Details>
+				<Num_Shares>2000</Num_Shares>
+				<Share_Price>365.20</Share_Price>
+			</Shares_Details>
+		</DataItem_Customer>
+	</Doc_Data>
+</RequestDoc>
+
