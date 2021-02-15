@@ -6475,11 +6475,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Yanesh\\source\\repos\\NewWebApplication\\NewWebApplication\\NewWebApplication.csproj",
+      "projectUniqueName": "C:\\Users\\Yanesh\\source\\Web-api-app\\NewWebApplication\\NewWebApplication.csproj",
       "projectName": "NewWebApplication",
-      "projectPath": "C:\\Users\\Yanesh\\source\\repos\\NewWebApplication\\NewWebApplication\\NewWebApplication.csproj",
+      "projectPath": "C:\\Users\\Yanesh\\source\\Web-api-app\\NewWebApplication\\NewWebApplication.csproj",
       "packagesPath": "C:\\Users\\Yanesh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Yanesh\\source\\repos\\NewWebApplication\\NewWebApplication\\obj\\",
+      "outputPath": "C:\\Users\\Yanesh\\source\\Web-api-app\\NewWebApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

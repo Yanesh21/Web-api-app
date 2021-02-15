@@ -47,36 +47,19 @@ namespace NewWebApplication.Controllers
         }
 
         [HttpPost("upload"), DisableRequestSizeLimit]
-        public IActionResult UploadFile(IFormFile uploadFile)
+        public async Task<IActionResult> UploadFile(IFormFile uploadFile)
         {
             try
             {
                 _logger.LogInformation("HomeController: Uploading and processing data from xml file");
-                _homeService.uploadXmlFile(uploadFile);
+                await _homeService.uploadXmlFile(uploadFile);
             }
             catch (Exception ex)
             {
                 _logger.LogError("HomeController: Failed to upload and process data from xml file", ex);
             }
-            return View();
+            return RedirectToAction("index");
         }
-
-        //[HttpGet("index")]
-        //public async Task<IActionResult> GetCustomerDetails()
-        //{
-        //    try
-        //    {
-        //        _logger.LogInformation("HomeController: gets customers details");
-        //        IEnumerable<CustomerModel> customerDetail = await _homeService.getCustomerDetails();
-        //        TempData["myData"] = customerDetail;
-        //        return RedirectToAction("index");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        _logger.LogError("HomeController: Failed to get customers details", ex);
-        //        throw;
-        //    }
-        //}
 
         public IActionResult Privacy()
         {

@@ -22,6 +22,6 @@ namespace NewWebApplication.Models
         public decimal Share_Price { get; set; }
 
         [NotMapped]
-        public int balance { get; set; }
+        public decimal balance { get; set; }
     }
 }

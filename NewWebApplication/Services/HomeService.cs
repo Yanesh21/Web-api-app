@@ -48,15 +48,7 @@ namespace NewWebApplication.Services
                         {
                             List<string> skipFields = new List<string> { "RequestDoc", "Doc_Date", "Doc_Data", "Doc_Ref", "DataItem_Customer", "Mailing_Address", "Contact_Details", "Shares_Details" };
                             string label = reader.Name.ToString();
-                            if (label == "DataItem_Customer")
-                            {
-                                if (customerDetails != null)
-                                {
-                                    customerList.Add(customerDetails);
-                                }
-                                customerDetails = new CustomerModel();
-                            }
-
+                            
                             if (!skipFields.Contains(label))
                             {
                                 DateTime dateOfBirth = new DateTime();
@@ -149,6 +141,14 @@ namespace NewWebApplication.Services
                                     }
                                 }
                             }
+                            if (label == "DataItem_Customer")
+                            {
+                                if (customerDetails != null)
+                                {
+                                    customerList.Add(customerDetails);
+                                }
+                                customerDetails = new CustomerModel();
+                            }
                         }
                     }
                 }
@@ -171,6 +171,10 @@ namespace NewWebApplication.Services
                 _logger.LogInformation("HomeService: getting customers details");
 
                 IEnumerable<CustomerModel> customerDetailList = await _dbContext.Customer.ToListAsync();
+                foreach (CustomerModel customerDetail in customerDetailList)
+                {
+                    customerDetail.balance = customerDetail.Num_Shares * customerDetail.Share_Price;
+                }
                 return customerDetailList;
             }
             catch (Exception ex)
