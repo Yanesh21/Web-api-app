@@ -1,0 +1,68 @@
+﻿@model NewWebApplication.Models.CustomerModel
+
+@{ 
+    CustomerModel customer = ViewBag.data;
+}
+    <div class="text-center">
+        <h1 class="display-4">Customer detail page</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        <center>
+           
+            <form action="update" method="post">
+                <table>
+                    <tr>
+                        <td>Customer_id:</td>
+                        <td><input type="text" id="customer_id" name="customer_id" class="form-control" value="@customer.customer_id" /></td>
+                    </tr>
+                    <tr>
+                        <td>Customer_name:</td>
+                        <td><input type="text" id="Contact_Name" name="Contact_Name" class="form-control" value="@customer.Contact_Name" /></td>
+                    </tr>
+                    <tr>
+                        <td>Customer_Type:</td>
+                        <td><input type="text" id="Customer_Type" name="Customer_Type" class="form-control" value="@customer.Customer_Type" /></td>
+                    </tr>
+                    <tr>
+                        <td>Date_Of_Birth:</td>
+                        <td><input type="text" id="Date_Of_Birth" name="Date_Of_Birth" class="form-control" value="@customer.Date_Of_Birth" /></td>
+                    </tr>
+                    <tr>
+                        <td>Registration_No:</td>
+                        <td><input type="text" id="Registration_No" name="Registration_No" class="form-control" value="@customer.Registration_No" /></td>
+                    </tr>
+                    <tr>
+                        <td>Address_Line1:</td>
+                        <td><input type="text" id="Address_Line1" name="Address_Line1" class="form-control" value="@customer.Address_Line1" /></td>
+                    </tr>
+                    <tr>
+                        <td>Address_Line2:</td>
+                        <td><input type="text" id="Address_Line2" name="Address_Line2" class="form-control" value="@customer.Address_Line2" /></td>
+                    </tr>
+                    <tr>
+                        <td>Town_City:</td>
+                        <td><input type="text" id="Town_City" name="Town_City" class="form-control" value="@customer.Town_City" /></td>
+                    </tr>
+                    <tr>
+                        <td>Country:</td>
+                        <td><input type="text" id="Country" name="Country" class="form-control" value="@customer.Country" /></td>
+                    </tr>
+                    <tr>
+                        <td>Contact_Number:</td>
+                        <td><input type="text" id="Contact_Number" name="Contact_Number" class="form-control" value="@customer.Contact_Number" /></td>
+                    </tr>
+                    <tr>
+                        <td>Number of shares:</td>
+                        <td><input type="text" id="Num_Shares" name="Num_Shares" class="form-control" value="@customer.Num_Shares" /></td>
+                    </tr>
+                    <tr>
+                        <td>Share Price:</td>
+                        <td><input type="text" id="Share_Price" name="Share_Price" class="form-control" value="@customer.Share_Price" /></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button type="submit">submit</button></td>
+                    </tr>
+                </table>
+            </form>
+        </center>
+    </div>

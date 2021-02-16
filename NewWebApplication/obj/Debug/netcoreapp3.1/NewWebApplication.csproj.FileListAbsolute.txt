@@ -100,7 +100,6 @@ C:\Users\Yanesh\source\repos\NewWebApplication\NewWebApplication\bin\Debug\netco
 C:\Users\Yanesh\source\repos\NewWebApplication\NewWebApplication\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\Yanesh\source\repos\NewWebApplication\NewWebApplication\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\Yanesh\source\Web-api-app\NewWebApplication\obj\Debug\netcoreapp3.1\NewWebApplication.csprojAssemblyReference.cache
-C:\Users\Yanesh\source\Web-api-app\NewWebApplication\obj\Debug\netcoreapp3.1\NewWebApplication.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Yanesh\source\Web-api-app\NewWebApplication\obj\Debug\netcoreapp3.1\NewWebApplication.RazorAssemblyInfo.cache
 C:\Users\Yanesh\source\Web-api-app\NewWebApplication\obj\Debug\netcoreapp3.1\NewWebApplication.RazorAssemblyInfo.cs
 C:\Users\Yanesh\source\Web-api-app\NewWebApplication\obj\Debug\netcoreapp3.1\NewWebApplication.AssemblyInfoInputs.cache
@@ -202,3 +201,6 @@ C:\Users\Yanesh\source\Web-api-app\NewWebApplication\obj\Debug\netcoreapp3.1\New
 C:\Users\Yanesh\source\Web-api-app\NewWebApplication\obj\Debug\netcoreapp3.1\NewWebApplication.csproj.CopyComplete
 C:\Users\Yanesh\source\Web-api-app\NewWebApplication\obj\Debug\netcoreapp3.1\staticwebassets\NewWebApplication.StaticWebAssets.Manifest.cache
 C:\Users\Yanesh\source\Web-api-app\NewWebApplication\obj\Debug\netcoreapp3.1\staticwebassets\NewWebApplication.StaticWebAssets.xml
+C:\Users\Yanesh\source\Web-api-app\NewWebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Home\GetCustomerDetailsById.cshtml.g.cs
+C:\Users\Yanesh\source\Web-api-app\NewWebApplication\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Yanesh\source\Web-api-app\NewWebApplication\obj\Debug\netcoreapp3.1\NewWebApplication.MvcApplicationPartsAssemblyInfo.cache

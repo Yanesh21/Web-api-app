@@ -13,6 +13,9 @@ using NewWebApplication.DBContext;
 using NewWebApplication.Services;
 using Microsoft.Extensions.Logging;
 using Serilog;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace NewWebApplication
 {
@@ -33,6 +36,28 @@ namespace NewWebApplication
             services.AddTransient<HomeService>();
             string connectionString = Configuration.GetConnectionString("ConnectionString");
             services.AddDbContext<DefaultDbContext>(options => options.UseSqlServer(connectionString));
+            services.AddCors(options =>
+            {
+                options.AddPolicy("EnableCORS", builder =>
+                {
+                    builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().Build();
+                });
+            });
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = true,
+
+                        ValidIssuer = Configuration.GetSection("API").GetSection("issuer").Value,
+                        ValidAudience = Configuration.GetSection("API").GetSection("ApiPath").Value,
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("df9292d5782357ef41435a9a59cfe77c"))
+                    };
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +73,7 @@ namespace NewWebApplication
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();

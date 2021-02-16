@@ -20,6 +20,7 @@
     <center>
         <table border="1">
             <tr>
+                <th>Action</th>
                 <th>Customer_id</th>
                 <th>Customer_name</th>
                 <th>Customer_Type</th>
@@ -30,7 +31,13 @@
             @foreach (var item in @ViewBag.data)
             {
                 <tr>
-                    <td><a href="@Url.Action("", "home")">@item.customer_id</a></td>
+                    <td>
+                        @using (Html.BeginForm("index", "home", new { customer_id = @item.customer_id }, FormMethod.Post))
+                        {
+                            <input type="submit" value="Edit" />
+                        }
+                    </td>
+                    <td>@item.customer_id</td>
                     <td>@item.Contact_Name</td>
                     <td>@item.Customer_Type</td>
                     <td>@item.Num_Shares</td>
